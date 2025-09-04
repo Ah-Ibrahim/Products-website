@@ -1,7 +1,12 @@
 import './App.css';
+import ProductPage from './pages/ProductPage';
 
 function App() {
-	return <div className="text-red-500">Testing Tailwind</div>;
+    return (
+        <>
+            <ProductPage />
+        </>
+    );
 }
 
 export default App;

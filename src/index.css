@@ -1,7 +1,128 @@
 @import 'tailwindcss';
 
+@font-face {
+    font-family: 'Noto Sans';
+    src: url('./assets/fonts/Noto_Sans/NotoSans-VariableFont_wdth,wght.ttf')
+        format('truetype');
+}
+
 @theme {
+    /* Overriding theme variables */
+    --tw-duration: 0.35s;
+
+    /* Extending theme variables  */
+    /* Animations */
+    --animate-marquee: marqueeAnimation 10s linear infinite;
+
+    /* Colors */
+    /* Text */
+    --color-primary: var(--color-neutral-600);
+    --color-primary-hover: var(--color-neutral-950);
+    --color-primary-inverted: var(--color-white);
+
+    --color-secondary: var(--color-neutral-600);
+    --color-tertiary: var(--color-neutral-500);
+
+    --color-brand: var(--color-indigo-700);
+
+    --color-disabled: var(--color-neutral-400);
+    --color-error: var(--color-red-600);
+    --color-error-emphasize: var(--color-red-800);
+    --color-success: var(--color-green-700);
+    --color-warning: var(--color-amber-700);
+
+    /* Background */
+    --color-bg-primary: var(--color-white);
+    --color-bg-primary-inverted: var(--color-neutral-950);
+    --color-bg-primary-hover: var(--color-neutral-50);
+
+    --color-bg-secondary: var(--color-gray-200);
+    --color-bg-secondary-hover: var(--color-gray-300);
+    --color-bg-tertiary: var(--color-neutral-50);
+
+    --color-bg-brand-primary: var(--color-indigo-700);
+    --color-bg-brand-primary-emphasize: var(--color-indigo-800);
+    --color-bg-brand-subtle: var(--color-indigo-50);
+
+    --color-bg-disabled: var(--color-neutral-100);
+    --color-bg-disabled-emphasize: var(--color-gray-100);
+    --color-bg-error: var(--color-red-600);
+    --color-bg-error-emphasize: var(--color-red-700);
+    --color-bg-error-subtle: var(--color-red-50);
+    --color-bg-success-subtle: var(--color-green-50);
+    --color-bg-neutral-subtle: var(--color-gray-50);
+    --color-bg-warning-subtle: var(--color-amber-50);
+
+    /* Line */
+    --color-line-primary: var(--color-neutral-200);
+
+    --color-line-secondary: var(--color-gray-400);
+
+    --color-line-brand-solid: var(--color-indigo-600);
+    --color-line-brand-subtle: var(--color-indigo-200);
+
+    --color-line-success: var(--color-green-200);
+    --color-line-error-subtle: var(--color-red-200);
+    --color-line-warning-subtle: var(--color-amber-200);
+
+    /* Icons */
+    --color-icon-emphasize: var(--color-neutral-700);
+    --color-icon-primary: var(--color-neutral-400);
+    --color-icon-primary-hover: var(--color-neutral-500);
+
+    --color-icon-brand: var(--color-indigo-500);
+    --color-icon-brand-background: var(--color-indigo-50);
+
+    --color-icon-success: var(--color-green-700);
+    --color-icon-error: var(--color-red-600);
+    --color-icon-warning: var(--color-yellow-400);
+
+    /* Form */
+    --color-form-text-title: var(--color-neutral-700);
+    --color-form-text-placeholder: var(--color-neutral-500);
+    --color-form-text-hint: var(--color-neutral-500);
+    --color-form-text-filled: var(--color-neutral-900);
+    --color-form-text-disabled: var(--color-neutral-400);
+    --color-form-text-error: var(--color-red-600);
+    --color-form-background: var(--color-neutral-50);
+    --color-form-border: var(--color-neutral-200);
 }
 
 @layer base {
+    body {
+        font-family: 'Noto sans', sans-serif;
+    }
+
+    img {
+        max-inline-size: 100%;
+        block-size: auto;
+        display: block;
+    }
+
+    button {
+        cursor: pointer;
+    }
+}
+
+@layer components {
+    .page {
+        /* Mobile */
+        --content-max-width: 100%;
+        --content-side-padding: 1rem;
+
+        /* Tablet */
+        @media (min-width: 48rem) {
+            --content-side-padding: 2rem;
+        }
+
+        /* Desktop */
+        @media (min-width: 90rem) {
+            --content-max-width: 80rem;
+        }
+    }
+
+    .section {
+        padding-inline: var(--content-side-padding);
+        max-width: var(--content-max-width);
+    }
 }
