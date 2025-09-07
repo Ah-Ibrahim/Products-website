@@ -17,8 +17,8 @@ function Navbar() {
     };
 
     return (
-        <header className="section bg-bg-tertiary">
-            <nav className="flex items-center py-8">
+        <header className="bg-bg-tertiary">
+            <nav className="section flex items-center py-8">
                 <a href="#">
                     <img src={logoSrc} alt="Company Logo" />
                 </a>

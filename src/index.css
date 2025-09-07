@@ -124,5 +124,6 @@
     .section {
         padding-inline: var(--content-side-padding);
         max-width: var(--content-max-width);
+        margin-inline: auto;
     }
 }
