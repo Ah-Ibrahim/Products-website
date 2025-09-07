@@ -105,7 +105,7 @@
 }
 
 @layer components {
-    .page {
+    .page-layout {
         /* Mobile */
         --content-max-width: 100%;
         --content-side-padding: 1rem;
