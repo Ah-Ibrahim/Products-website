@@ -1,6 +1,6 @@
 import { AnimatePresence } from 'motion/react';
 import { useState } from 'react';
-import logoSrc from '../assets/logos/logoipsum-346.svg';
+import logoSrc from '../../assets/logos/logoipsum-346.svg';
 import SideMenu from '../Navbar/SideMenu';
 
 // NOTE should I add animated icons?
